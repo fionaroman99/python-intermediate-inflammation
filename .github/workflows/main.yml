@@ -1,5 +1,5 @@
 name: CI
-# We can specify which Github events will trigger a CI build
+# Specify which Github events will trigger a CI build
 on: push
 
 # now define a single job 'build' (but could define more)
@@ -7,11 +7,11 @@ jobs:
 
   build:
 
-  # Here we add the matrices definition:
-  strategy:
-    matrix:
-      os: ["ubuntu-latest", "macos-latest", "windows-latest"]
-      python-version: ["3.10", "3.11"]
+    # Here we add the matrices definition:
+    strategy:
+      matrix:
+        os: ["ubuntu-latest", "macos-latest", "windows-latest"]
+        python-version: ["3.10", "3.11"]
 
     # we can also specify the OS to run tests on the matrix values
     # runs-on: ubuntu-latest
