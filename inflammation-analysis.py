@@ -22,11 +22,6 @@ def main(args):
         in_files = [args.in_files]
 
     for filename in in_files:
-<<<<<<< HEAD
-=======
-        # inflammation_data = models.load_csv(filename)
-        # data_source = CSVDataSource(os.path.dirname(filename))
->>>>>>> full-data-analysis
         if args.full_data_analysis:
             _, extension = os.path.splitext(filename)
             if extension == '.json':
@@ -41,24 +36,13 @@ def main(args):
             }
             views.visualize(graph_data)
             return
-<<<<<<< HEAD
 
-=======
->>>>>>> full-data-analysis
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='A basic patient inflammation data management system')
 
     parser.add_argument(
         'in_files', nargs='+', help='Input CSV(s) containing inflammation series for each patient')
-<<<<<<< HEAD
-
-    parser.add_argument(
-        '--full-data-analysis',
-        action='store_true',
-        dest='full_data_analysis')
-=======
->>>>>>> full-data-analysis
 
     args = parser.parse_args()
 
