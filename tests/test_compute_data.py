@@ -12,6 +12,10 @@ def test_compute_data_mock_source():
     result = analyse_data(data_source)
     npt.assert_array_almost_equal(result, [0, math.sqrt(0.25) ,0])
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> full-data-analysis
 def test_analyse_data():
 
     from inflammation.compute_data import analyse_data, CSVDataSource
